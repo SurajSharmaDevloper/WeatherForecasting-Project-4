@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+:root {
+    --primary: #1cac78;
+    --secondary: #3cb371;
+    --primary-1: #78866b;
+    --white: #ffffff;
+    --dark-1: #222831;
+    --dark-2: #393E46;
+    --white-1: #F2F2F2;
+    --black: #000000;
+}
+
+html {
+    font-size: 12pt;
+    font-weight: 500;
+    text-align: center;
+    text-decoration: none;
+    list-style: none;
+}
+
+section {
+    width: 100dvw;
+    height: 100dvh;
+    background-color: #393E46;
+}
+
+.container {
+    width: 100%;
+    height: auto;
+
+}
+
+.flex-contain {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.container .header {
+    background-color: var(--dark-1);
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.container .header>div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.container .header>div>p {
+    color: var(--white-1);
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.container .header>div>i {
+    color: var(--white-1);
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+.container .header .nav-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.container .header .nav-btn input {
+    background-color: var(--white-1);
+    font-size: 1rem;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 0.5rem;
+}
+
+.container .header .nav-btn input:focus{
+    outline: none;
+}
+
+.container .header .nav-btn > button{
+    text-wrap: nowrap;
+    background-color: var(--primary);
+    color: var(--white-1);
+    font-size: 1rem;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+.container .header .nav-btn > button:hover{
+    background-color: var(--secondary);
+}
+@media screen and (max-width:900px){
+    .container .header {
+       flex-direction: column;
+    }
+}

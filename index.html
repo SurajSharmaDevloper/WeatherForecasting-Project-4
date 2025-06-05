@@ -5,9 +5,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Forecasting</title>
     <link rel="stylesheet" href="./style.css">
+    <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
+    <link href='https://cdn.boxicons.com/fonts/brands/boxicons-brands.min.css' rel='stylesheet'>
     <script type="text/javascript" src="./script.js" defer ></script>
 </head>
 <body>
+    <section>
+        <div class="container">
+
+            <!-- main navbar with logo search bar and buttons  -->
+            <div class="header flex-contain">
+                <div class="flex-contain">
+                    <i class='bx  bx-cloud-sun'></i> 
+                   <p>Weather Forecasting</p> 
+                </div>
+                <div class="nav-btn">
+                    <input type="text" placeholder="Enter Your City Name">
+                    <button>
+                        <i class='bx  bx-search'></i> Search
+                    </button>
+                    <button>
+                        <i class='bx  bx-location-alt-2'></i> Current Location
+                    </button>
+                </div>
+            </div>
+            <!-- main navbar ends here  -->
+
+            <div class="sub-container">
+                <div class="left">
+                    <div class="Current-weather" >
+                        <div>
+                            <div class="details">
+                                <h2>
+                                    ____°C
+                                </h2>
+                                <p>
+                                    ___
+                                </p>
+                            </div>
+                            <div>
+                              <i class='bx  bx-cloud'></i> 
+                            </div>
+                        </div> 
+
+                        <div>
+                            <p id="Date"><i class='bx  bx-calendar-week'></i>___</p>
+                            <p id="Location"><i class='bx  bx-location'></i>___ </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="right-1">
+
+                </div>
+                <div class="right-2">
+
+                </div>
+
+            </div>
+        </div>
+    </section>
 
     
 </body>
