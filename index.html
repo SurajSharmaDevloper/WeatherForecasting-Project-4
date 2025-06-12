@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,8 +8,9 @@
     <link rel="stylesheet" href="./style.css">
     <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
     <link href='https://cdn.boxicons.com/fonts/brands/boxicons-brands.min.css' rel='stylesheet'>
-    <script type="text/javascript" src="./script.js" defer ></script>
+    <script type="text/javascript" src="./script.js" defer></script>
 </head>
+
 <body>
     <section>
         <div class="container">
@@ -16,8 +18,8 @@
             <!-- main navbar with logo search bar and buttons  -->
             <div class="header flex-contain">
                 <div class="flex-contain">
-                    <i class='bx  bx-cloud-sun'></i> 
-                   <p>Weather Forecasting</p> 
+                    <i class='bx  bx-cloud-sun'></i>
+                    <p>Weather Forecasting</p>
                 </div>
                 <div class="nav-btn">
                     <input type="text" placeholder="Enter Your City Name">
@@ -31,40 +33,127 @@
             </div>
             <!-- main navbar ends here  -->
 
-            <div class="sub-container">
-                <div class="left">
-                    <div class="Current-weather" >
-                        <div>
-                            <div class="details">
-                                <h2>
-                                    ____°C
-                                </h2>
-                                <p>
-                                    ___
-                                </p>
-                            </div>
-                            <div>
-                              <i class='bx  bx-cloud'></i> 
-                            </div>
-                        </div> 
+            <!-- main section start from here  -->
 
-                        <div>
-                            <p id="Date"><i class='bx  bx-calendar-week'></i>___</p>
-                            <p id="Location"><i class='bx  bx-location'></i>___ </p>
+            <div class="weather-data">
+                <div class="weather-left">
+                    <div class="card">
+                        <div class="current-weather">
+                            <div class="details">
+                                <p>Now</p>
+                                <h2>31.22 &deg;C</h2>
+                                <p>haze</p>
+                            </div>
+                            <div class="weather-icon">
+                                <img src="https://openweathermap.org/img/wn/04d@2x.png" alt="">
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="card-footer">
+                            <p><i class='bx  bx-calendar-week'></i> <a href="#">Thursday, 31 Aug 2025</a> </p>
+                            <p><i class='bx  bx-location'></i> <a href="#">Faridabad, Haryana</a> </p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <h2>5 Days Forecast</h2>
+                        <div class="day-forecast">
+                            <div class="forecast-item">
+                                <div class="icon-wrapper">
+                                    <img src="https://openweathermap.org/img/wn/02d.png" alt="">
+                                    <span>28.67&deg;C</span>
+                                </div>
+                                <p>1 Sep</p>
+                                <p>Friday</p>
+                            </div>
+                            <div class="forecast-item">
+                                <div class="icon-wrapper">
+                                    <img src="https://openweathermap.org/img/wn/02d.png" alt="">
+                                    <span>28.67&deg;C</span>
+                                </div>
+                                <p>1 Sep</p>
+                                <p>Friday</p>
+                            </div>
+                            <div class="forecast-item">
+                                <div class="icon-wrapper">
+                                    <img src="https://openweathermap.org/img/wn/02d.png" alt="">
+                                    <span>28.67&deg;C</span>
+                                </div>
+                                <p>1 Sep</p>
+                                <p>Friday</p>
+                            </div>
+                            <div class="forecast-item">
+                                <div class="icon-wrapper">
+                                    <img src="https://openweathermap.org/img/wn/02d.png" alt="">
+                                    <span>28.67&deg;C</span>
+                                </div>
+                                <p>1 Sep</p>
+                                <p>Friday</p>
+                            </div>
+                            <div class="forecast-item">
+                                <div class="icon-wrapper">
+                                    <img src="https://openweathermap.org/img/wn/02d.png" alt="">
+                                    <span>28.67&deg;C</span>
+                                </div>
+                                <p>1 Sep</p>
+                                <p>Friday</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="right-1">
 
+                <div class="weather-right">
+                    <h2>Today's Highlights</h2>
+                    <div class="Air-quality">
+                        <div class="head">
+                            <p>Air quality index </p>
+                            <a class="air-index aqi-3" href="#">Good</a>
+                        </div>
+                        <div class="air-data">
+                            <div class="icon">
+                               <i class='bx  bx-wind'  ></i> 
+                            </div>
+                            <div class="air">
+                                <p>PM2.5</p>
+                                <h3>133.5</h3>
+                            </div>
+                            <div class="air">
+                                <p>PM2.5</p>
+                                <h3>133.5</h3>
+                            </div>
+                            <div class="air">
+                                <p>PM2.5</p>
+                                <h3>133.5</h3>
+                            </div>
+                            <div class="air">
+                                <p>PM2.5</p>
+                                <h3>133.5</h3>
+                            </div>
+                            <div class="air">
+                                <p>PM2.5</p>
+                                <h3>133.5</h3>
+                            </div>
+                            <div class="air">
+                                <p>PM2.5</p>
+                                <h3>133.5</h3>
+                            </div>
+                            <div class="air">
+                                <p>PM2.5</p>
+                                <h3>133.5</h3>
+                            </div>
+                            <div class="air">
+                                <p>PM2.5</p>
+                                <h3>133.5</h3>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
-                <div class="right-2">
-
-                </div>
-
             </div>
+
         </div>
     </section>
 
-    
+
 </body>
+
 </html>
