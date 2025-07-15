@@ -8,29 +8,33 @@
     <link rel="stylesheet" href="./style.css">
     <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
     <link href='https://cdn.boxicons.com/fonts/brands/boxicons-brands.min.css' rel='stylesheet'>
-    <script type="text/javascript" src="./script.js" defer></script>
+    <script type="module" defer src="./script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
 </head>
 
 <body>
+    <div class="header flex-contain">
+        <div class="flex-contain">
+            <i class='bx  bx-cloud-sun'></i>
+            <p>Weather Forecasting</p>
+        </div>
+        <div class="nav-btn">
+            <input type="text" id="searchInput" placeholder="Enter Your City Name">
+            <button id="SearchBtn" class="SearchBtn">
+                <i class='bx  bx-search'></i> Search
+            </button>
+            <button>
+                <i class='bx  bx-location-alt-2'></i> Current Location
+            </button>
+        </div>
+    </div>
     <section>
         <div class="container">
 
             <!-- main navbar with logo search bar and buttons  -->
-            <div class="header flex-contain">
-                <div class="flex-contain">
-                    <i class='bx  bx-cloud-sun'></i>
-                    <p>Weather Forecasting</p>
-                </div>
-                <div class="nav-btn">
-                    <input type="text" placeholder="Enter Your City Name">
-                    <button>
-                        <i class='bx  bx-search'></i> Search
-                    </button>
-                    <button>
-                        <i class='bx  bx-location-alt-2'></i> Current Location
-                    </button>
-                </div>
-            </div>
+
             <!-- main navbar ends here  -->
 
             <!-- main section start from here  -->
@@ -41,119 +45,154 @@
                         <div class="current-weather">
                             <div class="details">
                                 <p>Now</p>
-                                <h2>31.22 &deg;C</h2>
-                                <p>haze</p>
+                                <h2><span id="temp-data">31.22</span>&deg;C</h2>
+                                <p id="tempDet">haze</p>
                             </div>
-                            <div class="weather-icon">
-                                <img src="https://openweathermap.org/img/wn/04d@2x.png" alt="">
+                            <div class="weather-icon" id="weatherIcon">
+
                             </div>
                         </div>
                         <hr>
-                        <div class="card-footer">
-                            <p><i class='bx  bx-calendar-week'></i> <a href="#">Thursday, 31 Aug 2025</a> </p>
-                            <p><i class='bx  bx-location'></i> <a href="#">Faridabad, Haryana</a> </p>
+                        <div class="card-footer" id="card-footer">
+                            <p><i class='bx  bx-calendar-week'></i> <a href="#"><span id="day">Thursday</span>,<span
+                                        id="date"> 31 Aug 2025</span></a> </p>
+                            <p><i class='bx  bx-location'></i> <a href="#"><span id="citi">Faridabad</span>, <span
+                                        id="contry">Haryana</span></a> </p>
                         </div>
                     </div>
-                    <div class="card">
-                        <h2>5 Days Forecast</h2>
-                        <div class="day-forecast">
-                            <div class="forecast-item">
-                                <div class="icon-wrapper">
-                                    <img src="https://openweathermap.org/img/wn/02d.png" alt="">
-                                    <span>28.67&deg;C</span>
-                                </div>
-                                <p>1 Sep</p>
-                                <p>Friday</p>
-                            </div>
-                            <div class="forecast-item">
-                                <div class="icon-wrapper">
-                                    <img src="https://openweathermap.org/img/wn/02d.png" alt="">
-                                    <span>28.67&deg;C</span>
-                                </div>
-                                <p>1 Sep</p>
-                                <p>Friday</p>
-                            </div>
-                            <div class="forecast-item">
-                                <div class="icon-wrapper">
-                                    <img src="https://openweathermap.org/img/wn/02d.png" alt="">
-                                    <span>28.67&deg;C</span>
-                                </div>
-                                <p>1 Sep</p>
-                                <p>Friday</p>
-                            </div>
-                            <div class="forecast-item">
-                                <div class="icon-wrapper">
-                                    <img src="https://openweathermap.org/img/wn/02d.png" alt="">
-                                    <span>28.67&deg;C</span>
-                                </div>
-                                <p>1 Sep</p>
-                                <p>Friday</p>
-                            </div>
-                            <div class="forecast-item">
-                                <div class="icon-wrapper">
-                                    <img src="https://openweathermap.org/img/wn/02d.png" alt="">
-                                    <span>28.67&deg;C</span>
-                                </div>
-                                <p>1 Sep</p>
-                                <p>Friday</p>
-                            </div>
-                        </div>
+                    <div class="card" id="card">
+                        
                     </div>
                 </div>
 
                 <div class="weather-right">
-                    <h2>Today's Highlights</h2>
+                    <div class="headofHiglight" id="headofHiglight">
+                         <!-- time section  -->
+                    </div>
+
                     <div class="Air-quality">
-                        <div class="head">
-                            <p>Air quality index </p>
-                            <a class="air-index aqi-3" href="#">Good</a>
+                        <div class="head" id="head">
+                            <p>Air quality index <i class='bx  bx-wind'></i> </p>
+                            <a class="air-index aqi-3" href="#"><span id="Aqi-data">Good</span></a>
                         </div>
-                        <div class="air-data">
+                        <div class="air-data" id="AirData">
                             <div class="icon">
-                               <i class='bx  bx-wind'  ></i> 
+                                <i class='bx  bx-wind'></i>
+                            </div>
+                            <div class="air">
+                                <p>CO</p>
+                                <h3 id="Co">133.5</h3>
+                            </div>
+                            <div class="air">
+                                <p>NH3</p>
+                                <h3 id="nh3">133.5</h3>
+                            </div>
+                            <div class="air">
+                                <p>NO</p>
+                                <h3 id="no">133.5</h3>
+                            </div>
+                            <div class="air">
+                                <p>NO2</p>
+                                <h3 id="n02">133.5</h3>
+                            </div>
+                            <div class="air">
+                                <p>O3</p>
+                                <h3 id="o3">133.5</h3>
                             </div>
                             <div class="air">
                                 <p>PM2.5</p>
-                                <h3>133.5</h3>
+                                <h3 id="pm2.5">133.5</h3>
                             </div>
                             <div class="air">
-                                <p>PM2.5</p>
-                                <h3>133.5</h3>
+                                <p>PM10</p>
+                                <h3 id="pm10">133.5</h3>
                             </div>
                             <div class="air">
-                                <p>PM2.5</p>
-                                <h3>133.5</h3>
-                            </div>
-                            <div class="air">
-                                <p>PM2.5</p>
-                                <h3>133.5</h3>
-                            </div>
-                            <div class="air">
-                                <p>PM2.5</p>
-                                <h3>133.5</h3>
-                            </div>
-                            <div class="air">
-                                <p>PM2.5</p>
-                                <h3>133.5</h3>
-                            </div>
-                            <div class="air">
-                                <p>PM2.5</p>
-                                <h3>133.5</h3>
-                            </div>
-                            <div class="air">
-                                <p>PM2.5</p>
-                                <h3>133.5</h3>
+                                <p>SO2</p>
+                                <h3 id="SO2">133.5</h3>
                             </div>
                         </div>
 
                     </div>
+                    <div class="SunriseSunset" id="SunriseSunset">
+                        <h3>Sunrise & Sunset <i class='bx bx-sun'></i> </h3>
+                        <div class="sunrise">
+                            <i class='bx  bx-sun-rise'></i>
+                            <div>
+                                <p>sunrise</p>
+                                <h4>05:39 AM</h4>
+                            </div>
+                        </div>
+                        <div class="sunset">
+                            <i class='bx  bx-sun-set'></i>
+                            <div>
+                                <p>sunset</p>
+                                <h4>06:19 PM</h4>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="temprature">
+                        <h3>temprature <i class='bx  bx-thermometer'></i> </h3>
+                        <div>
+                            <div>
+                                <i class='bxr bx-hot'></i>
+                            </div>
+                            <div class="Celcius">
+                                <p>Min</p>
+                                <h1><span id="Min">43</span>&deg;C</h1>
+                            </div>
+                            <div class="Farenhiet">
+                                <p>Max</p>
+                                <h1><span id="Max">48</span>&deg;C</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="other-details">
+                        <div class="pressure">
+                            <p>Pressure</p>
+                            <div>
+                                <i class='bx bx-tachometer-alt'></i>
+                                <h3><span id="pressure">1007</span>hPa</h3>
+                            </div>
+                        </div>
+                        <div class="WindSpeed">
+                            <p>Wind speed</p>
+                            <div>
+                                <i class='bx bx-air'></i>
+                                <h3><span id="WindSpeed">2.07</span>m/s</h3>
+                            </div>
+
+
+                        </div>
+                        <div class="visibility">
+                            <p>Visibility</p>
+                            <div>
+                                <i class='bx  bx-eye-big'></i>
+                                <h3><span id="visible">3.5</span>km</h3>
+                            </div>
+
+
+                        </div>
+                        <div class="humidity">
+                            <p>Humidity</p>
+                            <div>
+                                <i class='bx  bx-water-drop-alt'></i>
+                                <h3> <span id="humidity">70</span>%</h3>
+                            </div>
+
+                        </div>
+
+                    </div>
                 </div>
+
+
+
             </div>
+        </div>
 
         </div>
     </section>
-
-
 </body>
 
 </html>
